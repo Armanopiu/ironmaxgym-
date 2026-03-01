@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iron Max Gym</title>
+
+<style>
+:root{
+  --red:#e63946;
+  --black:#111;
+  --dark:#1c1c1c;
+  --white:#fff;
+  --gray:#bbb;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:var(--black);
+  color:var(--white);
+}
+
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  background:#000;
+  padding:15px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:bold;
+}
+
+.logo span{
+  color:var(--red);
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:30px;
+}
+
+nav a{
+  color:var(--white);
+  text-decoration:none;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:var(--red);
+}
+
+.hero{
+  height:100vh;
+  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+  url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1500&q=80');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.hero h1{
+  font-size:55px;
+  margin-bottom:20px;
+}
+
+.hero h1 span{
+  color:var(--red);
+}
+
+.hero p{
+  color:var(--gray);
+  max-width:600px;
+  margin-bottom:30px;
+}
+
+.btn{
+  background:var(--red);
+  padding:12px 25px;
+  text-decoration:none;
+  color:#fff;
+  font-weight:bold;
+  border-radius:5px;
+  transition:.3s;
+  display:inline-block;
+}
+
+.btn:hover{
+  background:#c1121f;
+}
+
+section{
+  padding:80px 8%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+  font-size:32px;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:var(--dark);
+  padding:25px;
+  border-radius:8px;
+  text-align:center;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.card h3{
+  margin-bottom:15px;
+  color:var(--red);
+}
+
+.pricing{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+}
+
+.price-card{
+  background:var(--dark);
+  padding:30px;
+  width:280px;
+  text-align:center;
+  border-radius:8px;
+}
+
+.price{
+  font-size:40px;
+  margin:15px 0;
+}
+
+footer{
+  background:#000;
+  text-align:center;
+  padding:25px;
+  color:var(--gray);
+}
+
+@media(max-width:768px){
+  .hero h1{
+    font-size:35px;
+  }
+  nav ul{
+    gap:15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Iron<span>Max</span></div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>Train Hard. <span>Stay Strong.</span></h1>
+  <p>Iron Max Gym is where strength meets discipline. Build muscle, lose fat and become your best version.</p>
+  <a href="#pricing" class="btn">Join Now</a>
+</section>
+
+<section id="about">
+  <h2 class="section-title">Why Choose Iron Max?</h2>
+  <div class="features">
+    <div class="card">
+      <h3>Modern Equipment</h3>
+      <p>Latest cardio & strength machines for maximum performance.</p>
+    </div>
+    <div class="card">
+      <h3>Expert Trainers</h3>
+      <p>Certified professionals to guide your fitness journey.</p>
+    </div>
+    <div class="card">
+      <h3>Flexible Timing</h3>
+      <p>Morning & Evening batches available.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2 class="section-title">Membership Plans</h2>
+  <div class="pricing">
+    <div class="price-card">
+      <h3>Basic</h3>
+      <div class="price">₹999</div>
+      <p>Gym Access</p>
+      <p>Locker</p>
+      <br>
+      <a href="#" class="btn">Choose Plan</a>
+    </div>
+
+    <div class="price-card">
+      <h3>Pro</h3>
+      <div class="price">₹1999</div>
+      <p>All Basic Features</p>
+      <p>Personal Trainer</p>
+      <br>
+      <a href="#" class="btn">Choose Plan</a>
+    </div>
+
+    <div class="price-card">
+      <h3>Elite</h3>
+      <div class="price">₹2999</div>
+      <p>All Pro Features</p>
+      <p>Diet Plan + Trainer</p>
+      <br>
+      <a href="#" class="btn">Choose Plan</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact Us</h2>
+
+  <div style="text-align:center; margin-bottom:20px;">
+    <p>📍 West Bengal, District Dakshin Dinajpur, Banshihari, Smart Point Opposite Side</p>
+    <p>📞 +91 9564754019</p>
+  </div>
+
+  <div style="text-align:center; margin-bottom:30px;">
+    <a href="tel:9564754019" class="btn">📞 Call Now</a>
+    <a href="https://wa.me/919564754019" target="_blank" 
+       style="background:#25D366; margin-left:10px;" class="btn">
+       💬 WhatsApp
+    </a>
+  </div>
+
+  <div style="max-width:900px;margin:auto;">
+    <iframe 
+      src="https://www.google.com/maps?q=Banshihari%20Smart%20Point&output=embed"
+      width="100%" height="350"
+      style="border:0;border-radius:10px;" 
+      loading="lazy">
+    </iframe>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Iron Max Gym | All Rights Reserved
+</footer>
+
+</body>
+</html>
